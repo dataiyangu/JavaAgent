@@ -1,4 +1,8 @@
-com/leesin/PreMainTraceAgent.class
-com/leesin/PreMainTraceAgent$1.class
-com/leesin/ChangeVersionAdapter.class
-com/leesin/Test.class
+com/agent/main/JavaAgentMain.class
+com/agent/practie/ClassVisitorTest.class
+com/agent/main/FileOperate.class
+com/agent/practie/ClassPrinter.class
+com/agent/main/JavaAgentTest.class
+com/agent/practie/ChangeVersionAdapter.class
+com/agent/main/JavaAgentMain$1.class
+com/agent/practie/Helloworld.class

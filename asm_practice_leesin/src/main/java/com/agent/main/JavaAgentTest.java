@@ -1,7 +1,14 @@
 package com.agent.main;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import java.text.MessageFormat;
+
+
 public class JavaAgentTest {
+	private static final Logger logger = LoggerFactory.getLogger(JavaAgentTest.class);
 	public static void main(String[] args) {
-		System.out.println("i am JavaAgent Test");
+		logger.info("my name is : {}", "Leesin");
 	}
+
 }

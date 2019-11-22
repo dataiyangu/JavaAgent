@@ -13,6 +13,7 @@
         <asm.version>4.0</asm.version>
     </properties>
     <dependencies>
+        <!--asm-->
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
@@ -22,6 +23,18 @@
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm-commons</artifactId>
             <version>${asm.version}</version>
+        </dependency>
+        <!--log4j-->
+<!--        <dependency>-->
+<!--            <groupId>log4j</groupId>-->
+<!--            <artifactId>log4j</artifactId>-->
+<!--            <version>1.2.9</version>-->
+<!--        </dependency>-->
+        <!--slf4j-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.2</version>
         </dependency>
     </dependencies>
 
