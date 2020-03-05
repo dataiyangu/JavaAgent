@@ -18,23 +18,7 @@ import java.util.List;
 public class JavaAgentMain {
 	public static void premain(String agentArgs, Instrumentation inst) {
 		System.out.println("agentArgs : " + agentArgs);
-		inst.addTransformer(new ClassFileTransformer() {
-			@Override
-			public byte[] transform(ClassLoader loader, String className, Class<?> classBeingRedefined,
-									ProtectionDomain protectionDomain, byte[] bytes)
-					throws IllegalClassFormatException {
-				ClassWriter cw = new ClassWriter(0);
-				ClassReader cr = new ClassReader(bytes);
-				cr.accept(cw, 0);
-				byte[] b2 = cw.toByteArray();
-//				System.out.println(b2);
-				if (className != null && className.contains("JavaAgentTest")) {
-					FileOperate.writeClass("./Test.class", bytes);
-				}
-				return b2;
-			}
-		}, true);
+		inst.addTransformer(new JavaAgentTransformer(),true);
 	}
-
 
 }
